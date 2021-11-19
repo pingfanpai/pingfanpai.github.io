@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>中文识字 - 学习七千通用汉字（版本 v0.5）  - 平凡派</title>
+    <meta property="og:title" content="中文识字 - 平凡派">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="默认字库来自于汉典网站上的七千字《现代汉语通用字表》，已经按照常用频度排序。首次打开本页面需要加载字库（大约 1.4 Mb），可能需要等待几秒，加载完成后会先随机显示一个汉字。
+[&amp;hellip;] 学习：每点击一下字框显示一个字及其读音和释义，供用户学习。
+[&amp;hellip;] 复习：显示本批次中学习过的字，以及它们的读音。若点击其中一个字，下方的大字下会显示它的释义。若逐次点击下方的大字，则遍 &amp;hellip;">
+      <meta property="og:description" content="默认字库来自于汉典网站上的七千字《现代汉语通用字表》，已经按照常用频度排序。首次打开本页面需要加载字库（大约 1.4 Mb），可能需要等待几秒，加载完成后会先随机显示一个汉字。
+[&amp;hellip;] 学习：每点击一下字框显示一个字及其读音和释义，供用户学习。
+[&amp;hellip;] 复习：显示本批次中学习过的字，以及它们的读音。若点击其中一个字，下方的大字下会显示它的释义。若逐次点击下方的大字，则遍 &amp;hellip;">
+      
+    
+
+    
+    
+    
+    <meta name="twitter:image" content="https://pingfanpai.com/images/logo.png">
+    
+    
+
+    
+
+    
+    
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@xiee/zdict/css/learn-chars.min.css"></link>
+
+
+
+
+
+<link rel="stylesheet" href="/css/custom.css" />
+
+  </head>
+
+  
+  <body class="kids">
+    <header class="masthead">
+      
+
+<h1><a href="/"><img src="/images/logo.png" alt="Yihui Xie" /></a></h1>
+
+
+
+      <nav class="menu">
+  <ul>
+  
+  
+  <li><a href="/cn/">日志</a></li>
+  
+  <li><a href="/cn/heji/">专题</a></li>
+  
+  <li><a href="/cn/about/">关于</a></li>
+  
+  
+
+<li class="menu-extra"></li>
+
+
+
+<li><a href="https://github.com/rbind/kids%5c2021-02-21-chars.md" target="_blank">Edit this page</a></li>
+
+
+<li><a href="/kids/index.xml" type="application/rss+xml" title="RSS feed">Subscribe</a></li>
+
+<li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Attribution-NonCommercial-ShareAlike 4.0 International">License</a></li>
+
+
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>中文识字</h1>
+<h1><span class="subtitle">学习七千通用汉字（版本 v0.5）</span></h2>
+
+<h3>
+2021-02-21</h3>
+
+<hr>
+
+
+      </header>
+
+
+
+
+
+<div id="learn-chars"></div>
+<h2 id="使用说明">使用说明</h2>
+<p><a href="https://github.com/yihui/zdict">默认字库</a>来自于汉典网站上的七千字《<a href="https://www.zdic.net/zd/zb/ty/">现代汉语通用字表</a>》，已经按照常用频度排序。首次打开本页面需要加载字库（大约 1.4 Mb），可能需要等待几秒，加载完成后会先随机显示一个汉字。</p>
+<h3 id="模式">模式</h3>
+<ul>
+<li>
+<p>学习：每点击一下字框显示一个字及其读音和释义，供用户学习。</p>
+</li>
+<li>
+<p>复习：显示本批次中学习过的字，以及它们的读音。若点击其中一个字，下方的大字下会显示它的释义。若逐次点击下方的大字，则遍历显示上方学过的字。重复点击这个单选框可以显示或隐藏上一步还没学过的字（以灰色标示）。</p>
+</li>
+<li>
+<p>测验：依次显示本批次所有的字。用户自行输入它们的拼音，可以不用带音调。程序会验证输入的拼音是否正确。多音字输入任意一个音都算对。若拼音输错，则显示红色。若输入正确，则显示绿色。无论对错，都将显示该字的所有正确读音。按回车或点击字块进入下一题。</p>
+</li>
+<li>
+<p>挑战：从全字库中不断随机出一个字，用户输入该字的拼音。根据答对的比例估计用户的识字量。这个估计基于无放回简单随机抽样的原理，置信区间基于正态分布近似。答题量越大，估计越精确；当然，要是有本事把七千字全部挑战完，那也就不用估计了（置信区间宽度将为零）。</p>
+</li>
+</ul>
+<h3 id="设置">设置</h3>
+<p>用户可以从字库中任意选择一部分进行学习，默认从第 1 字向后选择 20 个字。第二个框中的数字若填 0 则表示选取全体集合，默认也就是选取七千字（一口气学七千字那还是人吗？那是牲口啊）。注意，第二个框填 0 时，若重复点击“复习”模式单选框，会将全体字集渲染出来；若全体子集太大，可能会导致浏览器不响应甚至崩溃。</p>
+<p>用户也可以自定义字库——将字符集粘贴到文本框中后点击”确定“按钮即可。粘贴的文本不必是单字的集合，也可以是一篇文章。程序会自动将它处理成字符集。七千通用字集之外的字符会被自动删除。</p>
+<h3 id="待办">待办</h3>
+<ul>
+<li>
+<p>记录测验模式中的错字，在复习模式中高亮显示</p>
+</li>
+<li>
+<p>存储所有学过的字，错字往前挪，正确的字往后挪；<a href="https://en.wikipedia.org/wiki/Spaced_repetition">间隔性复习</a>，错字优先，随机混入正确的字</p>
+</li>
+</ul>
+<h3 id="致谢">致谢</h3>
+<p>感谢邻居朱馨晨小朋友跪在地板上用平板认真测试，让我发现了一处<a href="https://github.com/yihui/zdict/commit/2a073fcc">程序缺陷</a>。</p>
+
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/kids/tale/">呆头懵脑</a></span>
+  <span class="nav-next"><a href="/kids/arith/">四则运算</a> &rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/kids\/tale\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/kids\/arith\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+
+
+
+
+
+<script async src="https://cdn.jsdelivr.net/combine/npm/@xiee/utils/js/fix-toc.min.js,npm/@xiee/utils/js/center-img.min.js,npm/@xiee/utils/js/right-quote.min.js,npm/@xiee/utils/js/no-highlight.min.js,npm/@xiee/utils/js/fix-footnote.min.js,npm/@xiee/utils/js/math-code.min.js,npm/@xiee/utils/js/external-link.min.js,npm/@xiee/utils/js/alt-title.min.js,npm/@xiee/utils/js/header-link.min.js"></script>
+
+
+
+
+
+
+
+<script async src="https://cdn.jsdelivr.net/combine/npm/@xiee/zdict/js/learn-chars.min.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
